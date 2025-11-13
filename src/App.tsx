@@ -5,7 +5,7 @@ import Home from './components/Home/Home';
 import Dishes from './components/Pages/Dishes/Dishes';
 import Booking from './components/Pages/Booking/Booking';
 import AboutUs from './components/AboutUs/AboutUs';
-import NotFound from './components/Pages/NOtFOund';
+import NotFound from './components/Pages/NotFound';
 function App() {
   return (
     <Router>

@@ -1,36 +1,73 @@
-import {Box,styled,Typography} from "@mui/material";
-const About =()=>{
-    const CustomBox =styled(Box)(({theme})=>({
-        width:"30px",
-        [theme.breakpoints.down("md")]:{
-            width:"85%",
+import { Box, styled, Typography } from "@mui/material";
 
-        },
-    }));
-    return(
-<Box sx={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",padding:"40px",
-    mt:"65px",mb:"100px"
-}}>
-    <div style={{
-        width:"5%",
-        height:"5px",
-        backgroundColor:"#0000339",
-        margin:"0 auto ",
-    }}>
+const About = () => {
+  // Styled component for responsive width
+  const CustomBox = styled(Box)(({ theme }) => ({
+    width: "40%",
+    [theme.breakpoints.down("md")]: {
+      width: "70%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "90%",
+    },
+  }));
 
-    </div>
-    <Typography variant="h3"
-    sx={{fontSize:"35px",fontWeight:"bold",color:"#0000339",my:3}}>
-About Us
-    </Typography>
-    <CustomBox>
-        <Typography variant="body2"sx={{fontSize:"16px",fontWeight:"500",color:"#5a6473",textAlign:"center",}}>
-            Welcome to our restaurant, where culinary excelience meets warm hospitality
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: { xs: "20px", sm: "30px", md: "40px" },
+        mt: { xs: "40px", md: "65px" },
+        mb: { xs: "60px", md: "100px" },
+        textAlign: "center",
+      }}
+    >
+      {/* Decorative line */}
+      <Box
+        sx={{
+          width: "60px",
+          height: "5px",
+          backgroundColor: "#000033",
+          borderRadius: "5px",
+          mb: 2,
+        }}
+      />
+
+      {/* Heading */}
+      <Typography
+        variant="h3"
+        sx={{
+          fontSize: { xs: "26px", sm: "30px", md: "35px" },
+          fontWeight: "bold",
+          color: "#000033",
+          my: 2,
+        }}
+      >
+        About Us
+      </Typography>
+
+      {/* Description */}
+      <CustomBox>
+        <Typography
+          variant="body2"
+          sx={{
+            fontSize: { xs: "14px", sm: "15px", md: "16px" },
+            fontWeight: 500,
+            color: "#5a6473",
+            textAlign: "center",
+            lineHeight: 1.6,
+          }}
+        >
+          Welcome to our restaurant, where culinary excellence meets warm
+          hospitality. We believe in serving delicious, freshly prepared meals
+          in a cozy and inviting atmosphere.
         </Typography>
-
-    </CustomBox>
-
-</Box>
-    );
+      </CustomBox>
+    </Box>
+  );
 };
+
 export default About;
